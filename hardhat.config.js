@@ -17,6 +17,11 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: 11155111,
     },
+    localhost: {
+      // much quicker to see the deploy contract log here than on testnet !!
+      url: "http://127.0.0.1:8545/",
+      chainId: 31337,
+    },
   },
   solidity: "0.8.19",
   etherscan: {
