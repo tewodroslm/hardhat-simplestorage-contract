@@ -11,3 +11,6 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+https://sepolia.etherscan.io/
+(testnet remote address) utilizing rpc alchemy to connect to testnet - ==================> 0x45e68b97f7D50AF02778Ad06781D56FDF7b2d4F1
