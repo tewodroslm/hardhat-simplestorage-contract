@@ -8,6 +8,7 @@ require("hardhat-gas-reporter");
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+const COINMARKETCAP_API_KEY = process.env.COINMARKET_CAP;
 module.exports = {
   // hardhat comes with internal network by default , that is why it is easyier to do local dev
   defaultNetwork: "hardhat", // local hardhat network will be used when "npx hardhat run scripts/deploy.js"
@@ -38,5 +39,10 @@ module.exports = {
   },
   gasReporter: {
     enabled: true, // npx hardhat test
+    outputFile: "gas-report.txt",
+    noColors: true,
+    currency: "USD",
+    coinmarketcap: COINMARKETCAP_API_KEY, // api key to get gas fee on USD from coinmarket https://pro.coinmarketcap.com/account/
+    token: "MATIC", // check gas fee on different network main, MATIC, ETC..
   },
 };
