@@ -20,7 +20,11 @@ module.exports = {
     },
     localhost: {
       // much quicker to see the deploy contract log here than on testnet !!
-      url: "http://127.0.0.1:8545/",
+      // steps
+      // npx hardhat run node   (nodes will be visible on the terminal and it is not on the hardhat network)
+      // npx hardhat run scripts/deploy.js --network localhost
+      // hardhat network is different from this localhost
+      url: "http://127.0.0.1:8545/", // is found from running "npx hardhat run node"
       chainId: 31337,
     },
   },
