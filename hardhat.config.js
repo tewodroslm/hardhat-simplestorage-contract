@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 require("./tasks/block-number");
+require("hardhat-gas-reporter");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -34,5 +35,8 @@ module.exports = {
   },
   sourcify: {
     enabled: true,
+  },
+  gasReporter: {
+    enabled: true, // npx hardhat test
   },
 };
